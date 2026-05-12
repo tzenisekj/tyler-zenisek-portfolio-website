@@ -10,7 +10,7 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#0b0a1e] text-gray-100">
+    <div className="min-h-screen bg-[#0b0a1e] text-gray-100 overflow-x-hidden">
       <ScrollProgress />
       <Navbar />
       <Hero />

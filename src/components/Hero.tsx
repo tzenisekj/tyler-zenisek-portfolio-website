@@ -1,12 +1,16 @@
+import FadeIn from './FadeIn'
+import ScrambleText from './ScrambleText'
+
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gray-950">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[#0b0a1e]">
       {/* Background grid pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1840_1px,transparent_1px),linear-gradient(to_bottom,#1a1840_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
       {/* Radial glow */}
-      <div className="absolute inset-0 bg-radial-[at_50%_50%] from-blue-900/30 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-radial-[at_50%_50%] from-indigo-900/30 via-transparent to-transparent" />
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-24 pb-16 md:pt-0 md:pb-0">
+        <FadeIn delay={0}>
         <div className="inline-flex items-start sm:items-center gap-2 px-4 py-1.5 bg-green-900/40 border border-green-700 rounded-full mb-6">
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse shrink-0 mt-1.5 sm:mt-0" />
           <span className="text-green-400 text-sm font-medium text-left">
@@ -15,24 +19,35 @@ export default function Hero() {
             <span className="block sm:hidden text-xs text-green-500 text-center">Available Immediately</span>
           </span>
         </div>
+        </FadeIn>
+        <FadeIn delay={120}>
         <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-2 sm:gap-3 mb-4">
-          <p className="text-blue-400 text-base font-semibold tracking-widest uppercase">
+          <p className="text-indigo-400 text-base font-semibold tracking-widest uppercase">
             Software Engineer
           </p>
           <span className="text-gray-600 hidden sm:inline">·</span>
           <div className="flex flex-wrap justify-center gap-2">
             {['Web Development', 'Backend', 'Cloud', 'DevOps'].map((tag) => (
-              <span key={tag} className="px-3 py-1 bg-gray-800 border border-gray-700 text-gray-400 text-xs font-medium rounded-full">
+              <span key={tag} className="px-3 py-1 bg-[#1a1838] border border-[#332f6e] text-gray-400 text-xs font-medium rounded-full">
                 {tag}
               </span>
             ))}
           </div>
         </div>
+        </FadeIn>
 
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[108px] font-bold text-white mb-3 leading-none tracking-tight">
-          Tyler <span className="text-blue-400">Zenisek</span>
+        <FadeIn delay={240}>
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[108px] font-bold mb-3 leading-none tracking-tight">
+          <ScrambleText
+            text="Tyler Zenisek"
+            delay={300}
+            duration={2200}
+            charClassName={(i) => i >= 6 ? 'text-indigo-400' : 'text-white'}
+          />
         </h1>
         <p className="text-gray-500 text-sm mb-8">Chicago, IL · Open to Remote</p>
+        </FadeIn>
+        <FadeIn delay={360}>
         <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-6">
           I pick up unfamiliar codebases fast and start contributing. Whether it's diagnosing
           a production bug, extending an existing service, or integrating a new feature into
@@ -40,18 +55,20 @@ export default function Hero() {
           with Java and Spring Boot microservices, AWS infrastructure, CI/CD pipelines, and React
           frontends. Cum laude CS grad with 10,000+ commits across two production apps.
         </p>
+        </FadeIn>
 
+        <FadeIn delay={480}>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#projects"
-            className="px-8 py-3 bg-blue-500 hover:bg-blue-400 text-white font-semibold rounded-lg transition-colors duration-200"
+            className="px-8 py-3 bg-indigo-500 hover:bg-indigo-400 text-white font-semibold rounded-lg transition-colors duration-200"
           >
             See My Work
           </a>
           <a
             href="/Tyler_Zenisek_Resume.pdf"
             download
-            className="inline-flex items-center justify-center gap-2 px-8 py-3 border border-blue-600 hover:border-blue-400 text-blue-400 hover:text-blue-300 font-semibold rounded-lg transition-colors duration-200"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3 border border-indigo-600 hover:border-indigo-400 text-indigo-400 hover:text-indigo-300 font-semibold rounded-lg transition-colors duration-200"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -59,8 +76,10 @@ export default function Hero() {
             Download Resume
           </a>
         </div>
+        </FadeIn>
 
         {/* Contact info row */}
+        <FadeIn delay={600}>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-3">
           <div className="relative group/email">
             <a href="https://mail.google.com/mail/?view=cm&to=tzenisekj@gmail.com" target="_blank" rel="noopener noreferrer"
@@ -70,9 +89,9 @@ export default function Hero() {
               </svg>
               Email
             </a>
-            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm font-medium whitespace-nowrap shadow-lg opacity-0 group-hover/email:opacity-100 transition-opacity duration-200 pointer-events-none">
+            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-[#1a1838] border border-[#332f6e] rounded-lg text-white text-sm font-medium whitespace-nowrap shadow-lg opacity-0 group-hover/email:opacity-100 transition-opacity duration-200 pointer-events-none">
               tzenisekj@gmail.com
-              <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-700" />
+              <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[#332f6e]" />
             </div>
           </div>
           <span className="hidden sm:inline text-gray-700">·</span>
@@ -84,9 +103,9 @@ export default function Hero() {
               </svg>
               Phone
             </a>
-            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm font-medium whitespace-nowrap shadow-lg opacity-0 group-hover/phone:opacity-100 transition-opacity duration-200 pointer-events-none">
+            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-[#1a1838] border border-[#332f6e] rounded-lg text-white text-sm font-medium whitespace-nowrap shadow-lg opacity-0 group-hover/phone:opacity-100 transition-opacity duration-200 pointer-events-none">
               (630) 776-0576
-              <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-700" />
+              <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[#332f6e]" />
             </div>
           </div>
           <span className="hidden sm:inline text-gray-700">·</span>
@@ -98,9 +117,9 @@ export default function Hero() {
               </svg>
               LinkedIn
             </a>
-            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm font-medium whitespace-nowrap shadow-lg opacity-0 group-hover/linkedin:opacity-100 transition-opacity duration-200 pointer-events-none">
+            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-[#1a1838] border border-[#332f6e] rounded-lg text-white text-sm font-medium whitespace-nowrap shadow-lg opacity-0 group-hover/linkedin:opacity-100 transition-opacity duration-200 pointer-events-none">
               linkedin.com/in/tyler-zenisek
-              <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-700" />
+              <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[#332f6e]" />
             </div>
           </div>
           <span className="hidden sm:inline text-gray-700">·</span>
@@ -112,12 +131,13 @@ export default function Hero() {
               </svg>
               GitHub
             </a>
-            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm font-medium whitespace-nowrap shadow-lg opacity-0 group-hover/github:opacity-100 transition-opacity duration-200 pointer-events-none">
+            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-[#1a1838] border border-[#332f6e] rounded-lg text-white text-sm font-medium whitespace-nowrap shadow-lg opacity-0 group-hover/github:opacity-100 transition-opacity duration-200 pointer-events-none">
               github.com/tzenisekj
-              <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-700" />
+              <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[#332f6e]" />
             </div>
           </div>
         </div>
+        </FadeIn>
       </div>
 
       {/* Scroll indicator */}

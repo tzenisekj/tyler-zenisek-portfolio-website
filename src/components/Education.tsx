@@ -1,3 +1,5 @@
+import FadeIn from './FadeIn'
+
 const coursework = [
   'Data Structures & Algorithms (Python)',
   'Advanced Data Structures & Algorithms (C++)',
@@ -10,18 +12,21 @@ const coursework = [
 
 export default function Education() {
   return (
-    <section id="education" className="py-16 md:py-24 bg-gray-900">
+    <section id="education" className="py-16 md:py-24 bg-[#0f0e28]">
       <div className="max-w-6xl mx-auto px-6">
+        <FadeIn>
         <div className="text-center mb-10 md:mb-16">
-          <p className="text-blue-400 text-sm font-semibold tracking-widest uppercase mb-3">Education</p>
+          <p className="text-indigo-400 text-sm font-semibold tracking-widest uppercase mb-3">Education</p>
           <h2 className="text-3xl md:text-4xl font-bold text-white">Academic Background</h2>
         </div>
+        </FadeIn>
 
         <div className="grid md:grid-cols-3 gap-8 items-start">
-          <div className="bg-gray-800 border border-gray-700 rounded-2xl p-8">
+          <FadeIn delay={100}>
+          <div className="bg-[#1a1838] border border-[#332f6e] rounded-2xl p-8">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-blue-900/50 border border-blue-700 rounded-xl flex items-center justify-center shrink-0">
-                <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-12 h-12 bg-indigo-900/50 border border-indigo-700 rounded-xl flex items-center justify-center shrink-0">
+                <svg className="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                 </svg>
@@ -30,7 +35,7 @@ export default function Education() {
                 <h3 className="text-xl font-bold text-white mb-1">
                   B.S. in Computer Science
                 </h3>
-                <p className="text-blue-400 font-medium mb-1">Lewis University</p>
+                <p className="text-indigo-400 font-medium mb-1">Lewis University</p>
                 <p className="text-gray-500 text-sm mb-1">Romeoville, IL</p>
                 <p className="text-gray-500 text-sm mb-4">Graduated 2024</p>
                 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-yellow-900/40 border border-yellow-700 text-yellow-400 text-sm rounded-lg font-medium">
@@ -42,11 +47,13 @@ export default function Education() {
               </div>
             </div>
           </div>
+          </FadeIn>
 
-          <div className="bg-gray-800 border border-gray-700 rounded-2xl p-8">
+          <FadeIn delay={200}>
+          <div className="bg-[#1a1838] border border-[#332f6e] rounded-2xl p-8">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-blue-900/50 border border-blue-700 rounded-xl flex items-center justify-center shrink-0">
-                <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-12 h-12 bg-indigo-900/50 border border-indigo-700 rounded-xl flex items-center justify-center shrink-0">
+                <svg className="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                 </svg>
@@ -55,16 +62,18 @@ export default function Education() {
                 <h3 className="text-xl font-bold text-white mb-1">
                   A.S. in Software Development
                 </h3>
-                <p className="text-blue-400 font-medium mb-1">College of DuPage</p>
+                <p className="text-indigo-400 font-medium mb-1">College of DuPage</p>
                 <p className="text-gray-500 text-sm mb-1">Glen Ellyn, IL</p>
                 <p className="text-gray-500 text-sm">Graduated 2022</p>
               </div>
             </div>
           </div>
+          </FadeIn>
 
-          <div className="bg-gray-800 border border-gray-700 rounded-2xl p-8 flex flex-col gap-6">
+          <FadeIn delay={300}>
+          <div className="bg-[#1a1838] border border-[#332f6e] rounded-2xl p-8 flex flex-col gap-6">
             <div>
-              <h3 className="text-sm font-semibold text-blue-400 tracking-widest uppercase mb-4">
+              <h3 className="text-sm font-semibold text-indigo-400 tracking-widest uppercase mb-4">
                 Certifications
               </h3>
               <div className="flex items-start gap-3">
@@ -78,19 +87,20 @@ export default function Education() {
               </div>
             </div>
             <div>
-              <h3 className="text-sm font-semibold text-blue-400 tracking-widest uppercase mb-5">
+              <h3 className="text-sm font-semibold text-indigo-400 tracking-widest uppercase mb-5">
                 Relevant Coursework
               </h3>
             <ul className="space-y-2">
               {coursework.map((c) => (
                 <li key={c} className="flex items-center gap-3 text-gray-400 text-sm">
-                  <span className="w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 shrink-0" />
                   {c}
                 </li>
               ))}
             </ul>
             </div>
           </div>
+          </FadeIn>
         </div>
       </div>
     </section>

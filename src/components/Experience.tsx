@@ -1,3 +1,6 @@
+import { useEffect, useRef, useState } from 'react'
+import FadeIn from './FadeIn'
+
 const experiences = [
   {
     title: 'Software Engineer (Independent)',
@@ -40,29 +43,53 @@ const experiences = [
 ]
 
 export default function Experience() {
+  const sectionRef = useRef<HTMLElement>(null)
+  const [lineProgress, setLineProgress] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const el = sectionRef.current
+      if (!el) return
+      const rect = el.getBoundingClientRect()
+      const windowH = window.innerHeight
+      const progress = (windowH - rect.top) / (windowH + rect.height)
+      setLineProgress(Math.max(0, Math.min(1, progress)))
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <section id="experience" className="py-16 md:py-24 bg-gray-950">
+    <section ref={sectionRef} id="experience" className="py-16 md:py-24 bg-[#0b0a1e]">
       <div className="max-w-6xl mx-auto px-6">
+        <FadeIn>
         <div className="text-center mb-10 md:mb-16">
-          <p className="text-blue-400 text-sm font-semibold tracking-widest uppercase mb-3">Experience</p>
+          <p className="text-indigo-400 text-sm font-semibold tracking-widest uppercase mb-3">Experience</p>
           <h2 className="text-3xl md:text-4xl font-bold text-white">Work History</h2>
         </div>
+        </FadeIn>
 
         <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gray-800 hidden md:block" />
+          {/* Static rail */}
+          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-[#2a2855] hidden md:block" />
+          {/* Scroll-driven blue line */}
+          <div
+            className="absolute left-0 md:left-1/2 top-0 w-px bg-indigo-500 hidden md:block origin-top"
+            style={{ height: `${lineProgress * 100}%`, willChange: 'height' }}
+          />
 
           <div className="space-y-12">
             {experiences.map((exp, i) => (
+              <FadeIn key={exp.title + exp.company} delay={i * 150}>
               <div
-                key={exp.title + exp.company}
                 className={`relative grid md:grid-cols-2 gap-8 ${i % 2 === 0 ? '' : 'md:direction-rtl'}`}
               >
                 {/* Timeline dot */}
-                <div className="hidden md:block absolute left-1/2 top-6 -translate-x-1/2 w-3 h-3 rounded-full bg-blue-400 border-2 border-gray-950 z-10" />
+                <div className="hidden md:block absolute left-1/2 top-6 -translate-x-1/2 w-3 h-3 rounded-full bg-indigo-400 border-2 border-[#0b0a1e] z-10" />
 
                 <div className={i % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:col-start-2 md:pl-12'}>
-                  <p className="text-blue-400 text-sm font-medium mb-1">{exp.period}</p>
+                  <p className="text-indigo-400 text-sm font-medium mb-1">{exp.period}</p>
                   <h3 className="text-xl font-bold text-white">{exp.title}</h3>
                   <p className="text-gray-400">
                     {exp.company}
@@ -71,19 +98,19 @@ export default function Experience() {
                 </div>
 
                 <div className={i % 2 === 0 ? 'md:pl-12' : 'md:col-start-1 md:row-start-1 md:pr-12 md:text-right'}>
-                  <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
+                  <div className="bg-[#0f0e28] border border-[#2a2855] rounded-xl p-6">
                     <ul className="space-y-3 mb-4">
                       {exp.bullets.map((b) => (
                         <li key={b} className="flex items-start gap-3 text-gray-400 text-sm">
-                          <span className="text-blue-400 mt-0.5 shrink-0">›</span>
+                          <span className="text-indigo-400 mt-0.5 shrink-0">›</span>
                           {b}
                         </li>
                       ))}
                     </ul>
                     {exp.skills.length > 0 && (
-                      <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-800">
+                      <div className="flex flex-wrap gap-2 pt-4 border-t border-[#2a2855]">
                         {exp.skills.map((s) => (
-                          <span key={s} className="px-2 py-1 bg-gray-800 text-gray-400 text-xs rounded border border-gray-700">
+                          <span key={s} className="px-2 py-1 bg-[#1a1838] text-gray-400 text-xs rounded border border-[#332f6e]">
                             {s}
                           </span>
                         ))}
@@ -92,6 +119,7 @@ export default function Experience() {
                   </div>
                 </div>
               </div>
+              </FadeIn>
             ))}
           </div>
         </div>

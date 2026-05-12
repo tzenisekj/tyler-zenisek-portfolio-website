@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar'
+import ScrollProgress from './components/ScrollProgress'
 import Hero from './components/Hero'
 import About from './components/About'
 import Skills from './components/Skills'
@@ -9,7 +10,8 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100">
+    <div className="min-h-screen bg-[#0b0a1e] text-gray-100">
+      <ScrollProgress />
       <Navbar />
       <Hero />
       <About />

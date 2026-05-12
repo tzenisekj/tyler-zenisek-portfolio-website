@@ -35,9 +35,9 @@ export default function Footer() {
   }, [])
 
   return (
-    <footer id="contact" className="bg-gray-950 border-t border-gray-800 py-16">
+    <footer id="contact" className="bg-[#0b0a1e] border-t border-[#2a2855] py-16">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <p className="text-blue-400 text-sm font-semibold tracking-widest uppercase mb-4">Get in Touch</p>
+        <p className="text-indigo-400 text-sm font-semibold tracking-widest uppercase mb-4">Get in Touch</p>
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Let's Work Together</h2>
         <p className="text-gray-400 max-w-xl mx-auto mb-10">
           I'm actively looking for full-time software engineering roles. If you're hiring or know
@@ -50,8 +50,8 @@ export default function Footer() {
           rel="noopener noreferrer"
           className={`inline-flex items-center gap-2 px-8 py-3 font-semibold rounded-lg transition-all duration-300 mb-12 ${
             highlighted
-              ? 'bg-green-500 hover:bg-green-400 text-white scale-105 shadow-lg shadow-green-900/50 ring-2 ring-green-400 ring-offset-2 ring-offset-gray-950'
-              : 'bg-blue-500 hover:bg-blue-400 text-white'
+              ? 'bg-green-500 hover:bg-green-400 text-white scale-105 shadow-lg shadow-green-900/50 ring-2 ring-green-400 ring-offset-2 ring-offset-[#0b0a1e]'
+              : 'bg-indigo-500 hover:bg-indigo-400 text-white'
           } ${highlighted ? 'animate-pulse' : ''}`}
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -91,7 +91,7 @@ export default function Footer() {
           </span>
         </div>
 
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t border-[#2a2855] pt-8">
           <p className="text-gray-600 text-sm">
             © {new Date().getFullYear()} Tyler Zenisek · Chicago, IL
           </p>

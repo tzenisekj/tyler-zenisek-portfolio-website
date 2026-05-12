@@ -6,7 +6,7 @@ export default function Hero() {
       {/* Radial glow */}
       <div className="absolute inset-0 bg-radial-[at_50%_50%] from-blue-900/30 via-transparent to-transparent" />
 
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-24 pb-16 md:pt-0 md:pb-0">
         <div className="inline-flex items-start sm:items-center gap-2 px-4 py-1.5 bg-green-900/40 border border-green-700 rounded-full mb-6">
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse shrink-0 mt-1.5 sm:mt-0" />
           <span className="text-green-400 text-sm font-medium text-left">

@@ -53,9 +53,9 @@ function GitHubIcon() {
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 bg-gray-900">
+    <section id="projects" className="py-16 md:py-24 bg-gray-900">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <p className="text-blue-400 text-sm font-semibold tracking-widest uppercase mb-3">Projects</p>
           <h2 className="text-3xl md:text-4xl font-bold text-white">Things I've Built</h2>
         </div>
@@ -79,10 +79,10 @@ export default function Projects() {
                 </div>
               )}
 
-              <div className="p-8">
+              <div className="p-5 sm:p-8">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
                   <div>
-                    <div className="flex items-center gap-3 mb-2">
+                    <div className="flex flex-wrap items-center gap-2 mb-2">
                       <h3 className="text-2xl font-bold text-white">{project.title}</h3>
                       <span
                         className={`text-xs font-semibold px-2 py-1 rounded-full ${

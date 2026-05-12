@@ -10,9 +10,9 @@ const coursework = [
 
 export default function Education() {
   return (
-    <section id="education" className="py-24 bg-gray-900">
+    <section id="education" className="py-16 md:py-24 bg-gray-900">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <p className="text-blue-400 text-sm font-semibold tracking-widest uppercase mb-3">Education</p>
           <h2 className="text-3xl md:text-4xl font-bold text-white">Academic Background</h2>
         </div>

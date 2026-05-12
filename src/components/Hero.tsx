@@ -11,19 +11,21 @@ export default function Hero() {
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
           <span className="text-green-400 text-sm font-medium">Open to Work — Seeking Full-Time Roles</span>
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-4">
+        <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-2 sm:gap-3 mb-4">
           <p className="text-blue-400 text-base font-semibold tracking-widest uppercase">
             Software Engineer
           </p>
-          <span className="text-gray-600">·</span>
-          {['Web Development', 'Backend', 'Cloud', 'DevOps'].map((tag) => (
-            <span key={tag} className="px-3 py-1 bg-gray-800 border border-gray-700 text-gray-400 text-xs font-medium rounded-full">
-              {tag}
-            </span>
-          ))}
+          <span className="text-gray-600 hidden sm:inline">·</span>
+          <div className="flex flex-wrap justify-center gap-2">
+            {['Web Development', 'Backend', 'Cloud', 'DevOps'].map((tag) => (
+              <span key={tag} className="px-3 py-1 bg-gray-800 border border-gray-700 text-gray-400 text-xs font-medium rounded-full">
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
 
-        <h1 className="text-7xl md:text-[108px] font-bold text-white mb-8 leading-none tracking-tight">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[108px] font-bold text-white mb-8 leading-none tracking-tight">
           Tyler <span className="text-blue-400">Zenisek</span>
         </h1>
         <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-6">
@@ -54,7 +56,7 @@ export default function Hero() {
         </div>
 
         {/* Contact info row */}
-        <div className="mt-8 flex items-center justify-center gap-5">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-3">
           <div className="relative group/email">
             <a href="https://mail.google.com/mail/?view=cm&to=tzenisekj@gmail.com" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-gray-500 hover:text-gray-300 transition-colors text-xs">
@@ -68,7 +70,7 @@ export default function Hero() {
               <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-700" />
             </div>
           </div>
-          <span className="text-gray-700">·</span>
+          <span className="hidden sm:inline text-gray-700">·</span>
           <div className="relative group/phone">
             <a href="tel:6307760576"
               className="flex items-center gap-1.5 text-gray-500 hover:text-gray-300 transition-colors text-xs">
@@ -82,7 +84,7 @@ export default function Hero() {
               <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-700" />
             </div>
           </div>
-          <span className="text-gray-700">·</span>
+          <span className="hidden sm:inline text-gray-700">·</span>
           <div className="relative group/linkedin">
             <a href="https://linkedin.com/in/tyler-zenisek/" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-gray-500 hover:text-gray-300 transition-colors text-xs">
@@ -96,7 +98,7 @@ export default function Hero() {
               <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-700" />
             </div>
           </div>
-          <span className="text-gray-700">·</span>
+          <span className="hidden sm:inline text-gray-700">·</span>
           <div className="relative group/github">
             <a href="https://github.com/tzenisekj" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-gray-500 hover:text-gray-300 transition-colors text-xs">

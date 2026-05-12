@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-gray-900">
+    <section id="about" className="py-16 md:py-24 bg-gray-900">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
@@ -74,7 +74,7 @@ export default function About() {
 
             <div className="bg-gray-800 border border-gray-700 rounded-xl p-5">
               <p className="text-xs font-semibold text-gray-500 tracking-widest uppercase mb-4">Core Stack</p>
-              <div className="flex items-center justify-around">
+              <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3">
                 {[
                   { name: 'Java',        slug: 'java'       },
                   { name: 'Spring Boot', slug: 'spring'     },
@@ -99,7 +99,7 @@ export default function About() {
 
             <div className="bg-gray-800 border border-gray-700 rounded-xl p-5">
               <p className="text-xs font-semibold text-gray-500 tracking-widest uppercase mb-4">Find Me Online</p>
-              <div className="flex gap-3">
+              <div className="flex flex-col sm:flex-row gap-3">
                 <a
                   href="https://github.com/tzenisekj"
                   target="_blank"

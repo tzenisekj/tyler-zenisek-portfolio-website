@@ -60,7 +60,7 @@ export default function Footer() {
           tzenisekj@gmail.com
         </a>
 
-        <div className="flex justify-center gap-8 mb-12">
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-12">
           <a
             href="https://github.com/tzenisekj"
             target="_blank"

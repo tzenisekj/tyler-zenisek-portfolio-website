@@ -24,9 +24,8 @@ export default function About() {
               <p>
                 Outside of work I build for the same reason I got into this field — because a problem
                 exists that no one has solved well. The Balisong Flipping Center started as a side
-                project to give a tight-knit hobby community a real platform. It turned into 2000+
-                commits, a microserviced backend, and a fully automated deployment pipeline — because
-                once I start building, I don't stop until it's done right.
+                project to give a tight-knit hobby community a real platform. It turned into a production-grade platform with a microserviced backend and a fully
+                automated deployment pipeline — because once I start building, I don't stop until it's done right.
               </p>
             </div>
 

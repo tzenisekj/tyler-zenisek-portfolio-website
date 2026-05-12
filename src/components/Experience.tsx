@@ -1,11 +1,11 @@
 const experiences = [
   {
-    title: 'Independent Full-Stack Developer',
+    title: 'Software Engineer (Independent)',
     company: 'Balisong Flipping Center',
     location: 'Remote',
     period: 'January 2021 – Present',
     bullets: [
-      'Architected and shipped a full-stack community platform from scratch, accumulating 2000+ commits across 40+ implemented features.',
+      'Architected and deployed a production-grade full-stack community platform — 9,000+ commits across 40+ features, currently in pre-launch testing.',
       'Built containerized Java/Spring Boot microservices backed by MongoDB and deployed to AWS EC2, with images stored in AWS ECR.',
       'Implemented JWT and OAuth2 authentication for secure user account management.',
       'Established a fully automated CI/CD pipeline using GitHub Actions, Ansible, and Docker — reducing deployment to a single push.',
@@ -31,8 +31,9 @@ const experiences = [
     location: 'Chicago, IL',
     period: 'January 2020 – August 2020',
     bullets: [
-      'Delegated and completed 20+ user stories in a multi-team environment, resulting in a complete Android application used as a prototype system by 200+ individuals.',
-      'Collaborated with the backend team to diagnose and resolve WebSocket/Bluetooth data sync bugs, increasing workflow velocity week over week.',
+      'Owned Android application development end to end within a 4-developer team, collaborating across 3 cross-functional teams.',
+      'Diagnosed and resolved critical WebSocket/Bluetooth data sync bugs, improving team development velocity by ~2x.',
+      'Delivered the complete prototype on a strict 6-month deadline — application adopted by the U.S. military.',
     ],
     skills: ['Android Development', 'Java', 'Threads', 'WebSockets', 'AWS Lambda', 'Security', 'Databases', 'Git'],
   },

@@ -5,9 +5,9 @@ const projects = [
     year: null,
     featured: true,
     description:
-      'A full-stack community platform for the balisong flipping hobby. Architected and shipped with 40+ use cases and 2000+ commits, featuring JWT/OAuth2 authentication, microserviced backend, and fully automated deployment pipelines.',
+      'A full-stack community platform for the balisong flipping hobby. Architected and shipped with 40+ use cases and 9000+ commits, featuring JWT/OAuth2 authentication, microserviced backend, and fully automated deployment pipelines.',
     highlights: [
-      'Architected full-stack web app covering 40+ use cases with 2000+ commits',
+      'Architected full-stack web app covering 40+ use cases with 9000+ commits',
       'Implemented JWT and OAuth2 authentication for secure user management',
       'Built containerized Java/Spring Boot microservices with MongoDB, deployed to AWS EC2',
       'Established end-to-end CI/CD pipeline using GitHub Actions, Ansible, and Docker with images stored in AWS ECR',
@@ -22,8 +22,9 @@ const projects = [
     year: '2024',
     featured: false,
     description:
-      'A React/Firebase quiz application built as a senior capstone at Lewis University. Led a scrum team through full SDLC ownership, automating CI/CD pipelines and eliminating 13 database-related bugs — delivered on schedule.',
+      'A React/Firebase quiz application built as a senior capstone at Lewis University. Led a scrum team through full SDLC ownership, automating CI/CD pipelines and eliminating 13 database-related bugs — delivered on schedule with 1,000+ commits.',
     highlights: [
+      'Accumulated 1,000+ commits across the full project lifecycle',
       'Led a scrum team of multiple developers, delegating and owning 23+ user stories',
       'Automated build and deployment pipelines (CI/CD), cutting manual release effort significantly',
       'Eliminated 13 database-related bugs through systematic diagnosis and testing',

@@ -93,7 +93,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 pt-8">
           <p className="text-gray-600 text-sm">
-            © {new Date().getFullYear()} Tyler Zenisek · Crestwood, IL
+            © {new Date().getFullYear()} Tyler Zenisek · Chicago, IL
           </p>
         </div>
       </div>

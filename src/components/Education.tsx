@@ -62,10 +62,25 @@ export default function Education() {
             </div>
           </div>
 
-          <div className="bg-gray-800 border border-gray-700 rounded-2xl p-8">
-            <h3 className="text-sm font-semibold text-blue-400 tracking-widest uppercase mb-5">
-              Relevant Coursework
-            </h3>
+          <div className="bg-gray-800 border border-gray-700 rounded-2xl p-8 flex flex-col gap-6">
+            <div>
+              <h3 className="text-sm font-semibold text-blue-400 tracking-widest uppercase mb-4">
+                Certifications
+              </h3>
+              <div className="flex items-start gap-3">
+                <div>
+                  <p className="text-white font-semibold text-sm">AWS Certified Cloud Practitioner</p>
+                  <p className="text-gray-500 text-xs mt-0.5">Amazon Web Services</p>
+                  <span className="inline-block mt-2 px-2 py-0.5 bg-yellow-900/40 border border-yellow-700 text-yellow-400 text-xs rounded-md font-medium">
+                    In Progress — Expected Aug 2026
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold text-blue-400 tracking-widest uppercase mb-5">
+                Relevant Coursework
+              </h3>
             <ul className="space-y-2">
               {coursework.map((c) => (
                 <li key={c} className="flex items-center gap-3 text-gray-400 text-sm">
@@ -74,6 +89,7 @@ export default function Education() {
                 </li>
               ))}
             </ul>
+            </div>
           </div>
         </div>
       </div>

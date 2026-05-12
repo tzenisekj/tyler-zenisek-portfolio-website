@@ -51,22 +51,35 @@ export default function Navbar() {
         </a>
 
         {/* Desktop nav */}
-        <ul className="hidden md:flex items-center gap-8">
-          {links.map((l) => (
-            <li key={l.href}>
-              <a
-                href={l.href}
-                className={`text-sm transition-all duration-200 px-3 py-1.5 rounded-md ${
-                  activeSection === l.href.slice(1)
-                    ? 'bg-blue-900/50 text-blue-400 font-medium'
-                    : 'text-gray-400 hover:text-white hover:bg-gray-800'
-                }`}
-              >
-                {l.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="hidden md:flex items-center gap-6">
+          <ul className="flex items-center gap-2">
+            {links.map((l) => (
+              <li key={l.href}>
+                <a
+                  href={l.href}
+                  className={`text-sm transition-all duration-200 px-3 py-1.5 rounded-md ${
+                    activeSection === l.href.slice(1)
+                      ? 'bg-blue-900/50 text-blue-400 font-medium'
+                      : 'text-gray-400 hover:text-white hover:bg-gray-800'
+                  }`}
+                >
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className="w-px h-5 bg-gray-700" />
+          <a
+            href="/Tyler_Zenisek_Resume.pdf"
+            download
+            className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-1.5 bg-blue-600 hover:bg-blue-500 text-white rounded-md transition-colors duration-200"
+          >
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Resume
+          </a>
+        </div>
 
         {/* Mobile hamburger */}
         <button
@@ -99,6 +112,16 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href="/Tyler_Zenisek_Resume.pdf"
+                download
+                className="inline-block text-sm font-semibold px-4 py-1.5 bg-blue-600 hover:bg-blue-500 text-white rounded-md transition-colors duration-200"
+                onClick={() => setMenuOpen(false)}
+              >
+                Resume
+              </a>
+            </li>
           </ul>
         </div>
       )}

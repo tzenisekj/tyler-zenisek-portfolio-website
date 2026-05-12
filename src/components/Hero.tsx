@@ -7,9 +7,13 @@ export default function Hero() {
       <div className="absolute inset-0 bg-radial-[at_50%_50%] from-blue-900/30 via-transparent to-transparent" />
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-green-900/40 border border-green-700 rounded-full mb-6">
-          <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-          <span className="text-green-400 text-sm font-medium">Open to Work — Seeking Full-Time Roles</span>
+        <div className="inline-flex items-start sm:items-center gap-2 px-4 py-1.5 bg-green-900/40 border border-green-700 rounded-full mb-6">
+          <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse shrink-0 mt-1.5 sm:mt-0" />
+          <span className="text-green-400 text-sm font-medium text-left">
+            Open to Work — Seeking Full-Time Backend or DevOps Roles
+            <span className="hidden sm:inline"> · Available Immediately</span>
+            <span className="block sm:hidden text-xs text-green-500 text-center">Available Immediately</span>
+          </span>
         </div>
         <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-2 sm:gap-3 mb-4">
           <p className="text-blue-400 text-base font-semibold tracking-widest uppercase">
@@ -25,15 +29,16 @@ export default function Hero() {
           </div>
         </div>
 
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[108px] font-bold text-white mb-8 leading-none tracking-tight">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[108px] font-bold text-white mb-3 leading-none tracking-tight">
           Tyler <span className="text-blue-400">Zenisek</span>
         </h1>
+        <p className="text-gray-500 text-sm mb-8">Chicago, IL · Open to Remote</p>
         <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-6">
-          I build full-stack systems from scratch and ship them to production. That means
-          containerized Java and Spring Boot microservices deployed to AWS, CI/CD pipelines
-          automated with GitHub Actions and Docker, and React frontends built to scale — all
-          wired together and maintained end to end. Cum laude CS grad, 2000+ commits deep, and
-          always looking for the next hard problem to solve.
+          I pick up unfamiliar codebases fast and start contributing. Whether it's diagnosing
+          a production bug, extending an existing service, or integrating a new feature into
+          a live system — I focus on understanding how things work before changing them. Experienced
+          with Java and Spring Boot microservices, AWS infrastructure, CI/CD pipelines, and React
+          frontends. Cum laude CS grad with 10,000+ commits across two production apps.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

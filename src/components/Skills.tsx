@@ -1,23 +1,28 @@
 const skillGroups = [
   {
     category: 'Languages',
-    skills: ['JavaScript', 'TypeScript', 'Java', 'Python', 'C++'],
+    primary: ['JavaScript', 'TypeScript', 'Java'],
+    familiar: ['Python', 'C++'],
   },
   {
     category: 'Frameworks & Libraries',
-    skills: ['React', 'Redux', 'Spring Boot', 'Android SDK'],
+    primary: ['React', 'Spring Boot'],
+    familiar: ['Redux', 'Android SDK'],
   },
   {
     category: 'Cloud & DevOps',
-    skills: ['AWS EC2', 'AWS ECR', 'Amazon S3', 'Docker', 'GitHub Actions', 'Ansible', 'CI/CD'],
+    primary: ['Docker', 'AWS EC2', 'AWS ECR', 'GitHub Actions', 'CI/CD'],
+    familiar: ['Amazon S3', 'Ansible'],
   },
   {
     category: 'Data & APIs',
-    skills: ['MongoDB', 'MySQL', 'Firebase', 'REST APIs', 'JWT', 'OAuth2', 'WebSockets'],
+    primary: ['MongoDB', 'MySQL', 'REST APIs', 'JWT', 'OAuth2'],
+    familiar: ['Firebase', 'WebSockets'],
   },
   {
     category: 'Tools & Practices',
-    skills: ['Git', 'Jira', 'Postman', 'Swagger', 'Linux', 'Agile / Scrum', 'SDLC', 'MVC'],
+    primary: ['Git', 'Agile / Scrum', 'SDLC', 'Linux', 'MVC'],
+    familiar: ['Jira', 'Postman', 'Swagger'],
   },
 ]
 
@@ -28,6 +33,16 @@ export default function Skills() {
         <div className="text-center mb-10 md:mb-16">
           <p className="text-blue-400 text-sm font-semibold tracking-widest uppercase mb-3">Skills</p>
           <h2 className="text-3xl md:text-4xl font-bold text-white">Technologies & Tools</h2>
+          <div className="flex items-center justify-center gap-6 mt-4">
+            <div className="flex items-center gap-2">
+              <span className="px-2.5 py-0.5 bg-blue-900/40 text-blue-300 text-xs rounded-md border border-blue-700">Tag</span>
+              <span className="text-gray-500 text-xs">Primary</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="px-2.5 py-0.5 bg-gray-800 text-gray-400 text-xs rounded-md border border-gray-700">Tag</span>
+              <span className="text-gray-500 text-xs">Familiar</span>
+            </div>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -40,10 +55,18 @@ export default function Skills() {
                 {group.category}
               </h3>
               <div className="flex flex-wrap gap-2">
-                {group.skills.map((skill) => (
+                {group.primary.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-md border border-gray-700"
+                    className="px-3 py-1 bg-blue-900/40 text-blue-300 text-sm rounded-md border border-blue-700"
+                  >
+                    {skill}
+                  </span>
+                ))}
+                {group.familiar.map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1 bg-gray-800 text-gray-400 text-sm rounded-md border border-gray-700"
                   >
                     {skill}
                   </span>

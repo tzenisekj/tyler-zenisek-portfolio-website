@@ -11,7 +11,7 @@ export default function About() {
             <div className="space-y-4 text-gray-400 leading-relaxed">
               <p>
                 I got into software engineering because I like building things that actually work —
-                under real conditions, with real users. I'm based in Crestwood, IL, and I graduated
+                under real conditions, with real users. I'm based in the Chicagoland area, and I graduated
                 cum laude from Lewis University with a B.S. in Computer Science, but most of what
                 I know came from shipping code, breaking things, and figuring out why.
               </p>
@@ -41,10 +41,12 @@ export default function About() {
               Download Resume
             </a>
 
-            <div className="mt-4 flex items-start gap-3 bg-green-900/20 border border-green-800 rounded-xl p-4">
-              <span className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse shrink-0 mt-1" />
+            <div className="mt-4 bg-green-900/20 border border-green-800 rounded-xl p-4">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse shrink-0" />
+                <span className="text-green-300 text-sm font-semibold">Currently open to full-time software engineering roles.</span>
+              </div>
               <p className="text-green-300 text-sm leading-relaxed">
-                <span className="font-semibold">Currently open to full-time software engineering roles.</span>{' '}
                 I'm eager to bring my backend, cloud, and full-stack experience to a collaborative team.
                 If you think I'd be a good fit, I'd love to connect —{' '}
                 <a href="#contact" className="underline underline-offset-2 hover:text-green-200 transition-colors">
@@ -57,7 +59,7 @@ export default function About() {
           <div className="flex flex-col gap-4">
             <div className="grid grid-cols-2 gap-4">
               {[
-                { label: 'Commits Shipped', value: '2000+' },
+                { label: 'Commits Shipped', value: '10,000+' },
                 { label: 'Apps in Production', value: '2' },
                 { label: 'Features Built', value: '40+' },
                 { label: 'Years Experience', value: '4+' },

@@ -26,9 +26,9 @@ export default function Hero() {
             Software Engineer
           </p>
           <span className="text-gray-600 hidden sm:inline">·</span>
-          <div className="flex flex-wrap justify-center gap-2">
-            {['Web Development', 'Backend', 'Cloud', 'DevOps'].map((tag) => (
-              <span key={tag} className="px-3 py-1 bg-[#1a1838] border border-[#332f6e] text-gray-400 text-xs font-medium rounded-full">
+          <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-2">
+            {['Application Development', 'Backend', 'Cloud', 'DevOps'].map((tag) => (
+              <span key={tag} className="px-3 py-1 bg-[#1a1838] border border-[#332f6e] text-gray-400 text-xs font-medium rounded-full text-center">
                 {tag}
               </span>
             ))}

@@ -46,12 +46,12 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold text-white tracking-tight">
+        <a href="#" className="text-2xl font-bold text-white tracking-tight">
           Tyler <span className="text-indigo-400">Zenisek</span>
         </a>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-6">
           <ul className="flex items-center gap-2">
             {links.map((l) => (
               <li key={l.href}>
@@ -83,7 +83,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden text-gray-400 hover:text-white"
+          className="lg:hidden text-gray-400 hover:text-white"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -99,7 +99,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#0f0e28] border-t border-[#2a2855] px-6 py-4">
+        <div className="lg:hidden bg-[#0f0e28] border-t border-[#2a2855] px-6 py-4">
           <ul className="flex flex-col gap-4">
             {links.map((l) => (
               <li key={l.href}>

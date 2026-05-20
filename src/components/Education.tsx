@@ -23,7 +23,7 @@ export default function Education() {
 
         <div className="grid md:grid-cols-3 gap-8 items-start">
           <FadeIn delay={100}>
-          <div className="bg-[#1a1838] border border-[#332f6e] rounded-2xl p-8">
+          <div className="bg-[#1a1838] border border-[#332f6e] rounded-2xl p-6 md:p-8">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-indigo-900/50 border border-indigo-700 rounded-xl flex items-center justify-center shrink-0">
                 <svg className="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -50,7 +50,7 @@ export default function Education() {
           </FadeIn>
 
           <FadeIn delay={200}>
-          <div className="bg-[#1a1838] border border-[#332f6e] rounded-2xl p-8">
+          <div className="bg-[#1a1838] border border-[#332f6e] rounded-2xl p-6 md:p-8">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-indigo-900/50 border border-indigo-700 rounded-xl flex items-center justify-center shrink-0">
                 <svg className="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -71,7 +71,7 @@ export default function Education() {
           </FadeIn>
 
           <FadeIn delay={300}>
-          <div className="bg-[#1a1838] border border-[#332f6e] rounded-2xl p-8 flex flex-col gap-6">
+          <div className="bg-[#1a1838] border border-[#332f6e] rounded-2xl p-6 md:p-8 flex flex-col gap-6">
             <div>
               <h3 className="text-sm font-semibold text-indigo-400 tracking-widest uppercase mb-4">
                 Certifications

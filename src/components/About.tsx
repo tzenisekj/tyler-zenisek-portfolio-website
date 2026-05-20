@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section id="about" className="py-16 md:py-24 bg-[#0f0e28]">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <FadeIn delay={0}>
           <div>
             <p className="text-indigo-400 text-sm font-semibold tracking-widest uppercase mb-3">About Me</p>

@@ -1,7 +1,7 @@
 const projects = [
   {
     title: 'Balisong Flipping Center',
-    status: 'In Progress — functioning test server with daily additions',
+    status: 'In Progress',
     year: null,
     featured: true,
     description:
@@ -106,7 +106,7 @@ export default function Projects() {
                     <p className="text-gray-400 leading-relaxed max-w-2xl">{project.description}</p>
                   </div>
 
-                  <div className="flex gap-3 shrink-0">
+                  <div className="flex flex-wrap gap-3 shrink-0">
                     {project.githubUrl && (
                       <a
                         href={project.githubUrl}

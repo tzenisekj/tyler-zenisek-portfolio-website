@@ -61,9 +61,9 @@ export default function StatCounter({ value, label, delay = 0 }: Props) {
     <div
       ref={ref}
       style={{ transitionDelay: viewState === 'visible' ? `${delay}ms` : '0ms' }}
-      className={`transition-all duration-1000 ease-out ${visibilityClass} bg-[#1a1838] rounded-xl p-6 border border-[#332f6e] text-center`}
+      className={`transition-all duration-1000 ease-out ${visibilityClass} bg-[#1a1838] rounded-xl p-4 sm:p-6 border border-[#332f6e] text-center`}
     >
-      <p className="text-3xl font-bold text-indigo-400 mb-1">
+      <p className="text-2xl sm:text-3xl font-bold text-indigo-400 mb-1">
         {formatNumber(count)}{suffix}
       </p>
       <p className="text-sm text-gray-500">{label}</p>

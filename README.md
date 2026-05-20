@@ -45,7 +45,7 @@ A full-stack community platform for the balisong flipping hobby, currently in ac
 - **Backend:** Java, Spring Boot (microservices), MongoDB
 - **Auth:** JWT + OAuth2
 - **Infra:** AWS EC2, AWS ECR, Docker, GitHub Actions, Ansible
-- **Live:** http://ec2-23-22-127-77.compute-1.amazonaws.com/
+- **Live:** https://www.tylerzeniseks.com
 - **Source:** https://github.com/BalisongFlippingHub
 
 ## Contact

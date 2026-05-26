@@ -3,7 +3,7 @@ import FadeIn from './FadeIn'
 
 const experiences = [
   {
-    title: 'Software Engineer (Independent)',
+    title: 'Founding Engineer',
     company: 'Balisong Flipping Center',
     location: 'Remote',
     period: 'January 2021 – Present',
@@ -22,7 +22,7 @@ const experiences = [
     period: 'January 2024 – May 2024',
     bullets: [
       'Led a scrum team of multiple developers through full SDLC ownership — from planning and sprint delegation to deployment.',
-      'Delegated and personally completed 23+ user stories across a React/Firebase quiz application delivered on schedule.',
+      'Led and delivered 23+ user stories across a React/Firebase quiz application delivered on schedule.',
       'Automated CI/CD build and deployment pipelines, cutting manual release effort significantly.',
       'Diagnosed and eliminated 13 database-related bugs through systematic testing and root cause analysis.',
     ],

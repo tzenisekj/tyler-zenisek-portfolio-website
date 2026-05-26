@@ -30,7 +30,7 @@ export default function Hero() {
               <span className="text-gray-600 hidden sm:inline">·</span>
               <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center lg:justify-start gap-2">
                 {['Application Development', 'Backend', 'Cloud', 'DevOps'].map((tag) => (
-                  <span key={tag} className="px-3 py-1 bg-[#1a1838] border border-[#332f6e] text-gray-400 text-xs font-medium rounded-full text-center">
+                  <span key={tag} className="px-3 py-1 bg-[#1a1838] border border-[#332f6e] text-gray-400 text-xs font-medium rounded-full text-center w-full sm:w-auto inline-flex items-center justify-center">
                     {tag}
                   </span>
                 ))}

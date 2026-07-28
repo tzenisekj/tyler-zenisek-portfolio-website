@@ -2,7 +2,7 @@ const skillGroups = [
   {
     category: 'Languages',
     primary: ['JavaScript', 'TypeScript', 'Java'],
-    familiar: ['Python', 'C++'],
+    familiar: ['Python'],
   },
   {
     category: 'Frameworks & Libraries',
@@ -11,8 +11,8 @@ const skillGroups = [
   },
   {
     category: 'Cloud & DevOps',
-    primary: ['Docker', 'AWS EC2', 'AWS ECR', 'GitHub Actions', 'CI/CD'],
-    familiar: ['Amazon S3', 'Ansible'],
+    primary: ['Docker', 'AWS EC2', 'AWS ECR', 'Terraform', 'GitHub Actions', 'CI/CD'],
+    familiar: ['Amazon S3'],
   },
   {
     category: 'Data & APIs',
@@ -21,7 +21,7 @@ const skillGroups = [
   },
   {
     category: 'Tools & Practices',
-    primary: ['Git', 'Agile / Scrum', 'SDLC', 'Linux', 'MVC'],
+    primary: ['Git', 'Agile / Scrum', 'SDLC', 'Linux', 'MVC', 'Claude Code', 'MCP'],
     familiar: ['Jira', 'Postman', 'Swagger'],
   },
 ]

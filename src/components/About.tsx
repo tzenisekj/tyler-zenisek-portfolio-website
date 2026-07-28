@@ -75,18 +75,21 @@ export default function About() {
             <FadeIn delay={270}>
             <div className="bg-[#1a1838] border border-[#332f6e] rounded-xl p-5">
               <p className="text-xs font-semibold text-gray-500 tracking-widest uppercase mb-4">Core Stack</p>
-              <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3">
+              <div className="grid grid-cols-6 items-center justify-items-center gap-x-2 gap-y-3">
                 {[
-                  { name: 'Java',        slug: 'java'       },
-                  { name: 'Spring Boot', slug: 'spring'     },
-                  { name: 'Docker',      slug: 'docker'     },
-                  { name: 'AWS',         slug: 'aws'        },
-                  { name: 'React',       slug: 'react'      },
-                  { name: 'TypeScript',  slug: 'typescript' },
+                  { name: 'Java',           slug: 'java'          },
+                  { name: 'Spring Boot',    slug: 'spring'        },
+                  { name: 'Docker',         slug: 'docker'        },
+                  { name: 'AWS',            slug: 'aws'           },
+                  { name: 'Terraform',      slug: 'terraform'     },
+                  { name: 'GitHub Actions', slug: 'githubactions' },
+                  { name: 'React',          slug: 'react'         },
+                  { name: 'TypeScript',     slug: 'typescript'    },
+                  { name: 'Claude',         icon: 'https://cdn.simpleicons.org/claude/D97757' },
                 ].map((tech) => (
                   <div key={tech.name} className="flex flex-col items-center gap-1.5 group">
                     <img
-                      src={`https://skillicons.dev/icons?i=${tech.slug}&theme=dark`}
+                      src={tech.icon ?? `https://skillicons.dev/icons?i=${tech.slug}&theme=dark`}
                       alt={tech.name}
                       className="w-8 h-8 opacity-70 group-hover:opacity-100 transition-opacity duration-200"
                     />

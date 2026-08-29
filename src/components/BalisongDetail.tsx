@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router'
 import FadeIn from './FadeIn'
 
@@ -19,6 +20,18 @@ const features = [
   'Interactive API docs via SpringDoc OpenAPI / Swagger UI',
   'Health monitoring via Spring Actuator',
   'Schema migrations managed with Flyway',
+]
+
+const screenshots = [
+  { src: '/BFC-login.png', caption: 'Sign In' },
+  { src: '/BFC-registration.png', caption: 'Account Creation' },
+  { src: '/BFC-community-page.png', caption: 'Community Feed' },
+  { src: '/BFC-create-post.png', caption: 'Creating a Post' },
+  { src: '/BFC-collection-page.png', caption: 'Knife Collection' },
+  { src: '/BFC-collection-knife-page.png', caption: 'Knife Detail View' },
+  { src: '/BFC-collection-knife-form.png', caption: 'Adding a Knife' },
+  { src: '/BFC-profile-page.png', caption: 'User Profile' },
+  { src: '/BFC-wiki.png', caption: 'Community Wiki' },
 ]
 
 const infraNotes = [
@@ -69,8 +82,73 @@ function Arrow({ direction = 'down' }: { direction?: 'down' | 'right' }) {
 }
 
 export default function BalisongDetail() {
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
+  const lightboxItem = lightboxIndex !== null ? screenshots[lightboxIndex] : null
+
+  const showPrev = () => setLightboxIndex((i) => (i === null ? null : (i - 1 + screenshots.length) % screenshots.length))
+  const showNext = () => setLightboxIndex((i) => (i === null ? null : (i + 1) % screenshots.length))
+
+  useEffect(() => {
+    if (lightboxIndex === null) return
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setLightboxIndex(null)
+      if (e.key === 'ArrowLeft') showPrev()
+      if (e.key === 'ArrowRight') showNext()
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [lightboxIndex])
+
   return (
     <div className="pt-24">
+      {lightboxItem && (
+        <div
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-6 cursor-zoom-out"
+          onClick={() => setLightboxIndex(null)}
+        >
+          <p className="absolute top-5 left-1/2 -translate-x-1/2 text-white text-sm sm:text-base font-semibold cursor-default">
+            {lightboxItem.caption}
+          </p>
+
+          <button
+            onClick={() => setLightboxIndex(null)}
+            aria-label="Close"
+            className="absolute top-5 right-5 text-gray-400 hover:text-white transition-colors cursor-pointer"
+          >
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          <button
+            onClick={(e) => { e.stopPropagation(); showPrev() }}
+            aria-label="Previous image"
+            className="absolute left-3 sm:left-6 text-gray-400 hover:text-white transition-colors cursor-pointer"
+          >
+            <svg className="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <img
+            src={lightboxItem.src}
+            alt={lightboxItem.caption}
+            className="max-w-full max-h-full object-contain rounded-lg cursor-default"
+            onClick={(e) => e.stopPropagation()}
+          />
+
+          <button
+            onClick={(e) => { e.stopPropagation(); showNext() }}
+            aria-label="Next image"
+            className="absolute right-3 sm:right-6 text-gray-400 hover:text-white transition-colors cursor-pointer"
+          >
+            <svg className="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      )}
+
       <section className="py-12 md:py-16 bg-[#0f0e28]">
         <div className="max-w-4xl mx-auto px-6">
           <FadeIn>
@@ -118,6 +196,14 @@ export default function BalisongDetail() {
                 Source
               </a>
             </div>
+          </FadeIn>
+
+          <FadeIn delay={80}>
+            <img
+              src="/BFC-cover.png"
+              alt="Balisong Flipping Center homepage"
+              className="w-full aspect-[1636/1255] object-cover rounded-xl border border-[#332f6e] mt-8"
+            />
           </FadeIn>
         </div>
       </section>
@@ -209,6 +295,30 @@ export default function BalisongDetail() {
           </FadeIn>
 
           <FadeIn delay={320}>
+            <div>
+              <p className="text-indigo-400 text-sm font-semibold tracking-widest uppercase mb-4">Product Tour</p>
+              <div className="columns-1 sm:columns-2 gap-4">
+                {screenshots.map((s, i) => (
+                  <div key={s.src} className="break-inside-avoid mb-4">
+                    <button
+                      onClick={() => setLightboxIndex(i)}
+                      className="block w-full cursor-zoom-in"
+                      aria-label={`View larger image: ${s.caption}`}
+                    >
+                      <img
+                        src={s.src}
+                        alt={s.caption}
+                        className="w-full h-auto rounded-xl border border-[#332f6e] hover:border-indigo-500 transition-colors"
+                      />
+                    </button>
+                    <p className="text-gray-500 text-xs mt-2 text-center">{s.caption}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={400}>
             <div className="text-center pt-4">
               <Link
                 to="/#projects"

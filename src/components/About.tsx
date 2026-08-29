@@ -50,7 +50,8 @@ export default function About() {
                 <span className="text-green-300 text-sm font-semibold">Currently open to full-time software engineering roles.</span>
               </div>
               <p className="text-green-300 text-sm leading-relaxed">
-                I'm eager to bring my backend, cloud, and full-stack experience to a collaborative team.
+                I'm eager to bring my backend, cloud, and full-stack experience to a collaborative team —
+                and open to contract or freelance work as well.
                 If you think I'd be a good fit, I'd love to connect —{' '}
                 <a href="#contact" className="underline underline-offset-2 hover:text-green-200 transition-colors">
                   reach out anytime

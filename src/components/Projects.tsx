@@ -64,6 +64,14 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           </div>
         )}
 
+        {project.coverImage && (
+          <img
+            src={project.coverImage}
+            alt={`${project.title} homepage preview`}
+            className="w-full aspect-[1636/1255] object-cover"
+          />
+        )}
+
         <div className="p-5 sm:p-8">
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
             <div>

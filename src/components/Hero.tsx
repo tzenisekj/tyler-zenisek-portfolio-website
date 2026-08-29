@@ -1,5 +1,6 @@
 import FadeIn from './FadeIn'
 import ScrambleText from './ScrambleText'
+import LaunchAnnouncement from './LaunchAnnouncement'
 
 export default function Hero() {
   return (
@@ -14,6 +15,10 @@ export default function Hero() {
 
           {/* Text content */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left flex-1 order-2 lg:order-1">
+
+            <FadeIn delay={0}>
+            <LaunchAnnouncement />
+            </FadeIn>
 
             <FadeIn delay={80}>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-green-900/40 border border-green-700 rounded-full mb-5">

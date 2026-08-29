@@ -40,8 +40,9 @@ export default function Footer() {
         <p className="text-indigo-400 text-sm font-semibold tracking-widest uppercase mb-4">Get in Touch</p>
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Let's Work Together</h2>
         <p className="text-gray-400 max-w-xl mx-auto mb-10">
-          I'm actively looking for full-time software engineering roles. If you're hiring or know
-          someone who is, I'd love to hear from you — my inbox is always open.
+          I'm actively looking for full-time software engineering roles, and open to contract or
+          freelance work as well. If you're hiring or know someone who is, I'd love to hear from
+          you — my inbox is always open.
         </p>
 
         <a

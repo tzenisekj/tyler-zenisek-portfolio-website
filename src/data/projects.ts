@@ -4,6 +4,7 @@ export interface Project {
   status: string
   year: string | null
   featured: boolean
+  coverImage?: string
   description: string
   highlights: string[]
   tech: string[]
@@ -19,6 +20,7 @@ export const projects: Project[] = [
     status: 'In Progress',
     year: null,
     featured: true,
+    coverImage: '/BFC-cover.png',
     description:
       'A full-stack community platform for the balisong flipping hobby. Architected and shipped with 40+ use cases and 10,000+ commits, with a React/TypeScript frontend served from S3 and CloudFront, a containerized Spring Boot backend on EC2, and the entire production environment provisioned in Terraform.',
     highlights: [
@@ -32,6 +34,25 @@ export const projects: Project[] = [
     liveUrl: 'https://www.balisongflippingcenter.com',
     githubUrl: 'https://github.com/BalisongFlippingCenter',
     detailPath: '/projects/balisong',
+  },
+  {
+    title: 'Latch',
+    slug: 'latch',
+    status: 'In Progress',
+    year: '2026',
+    featured: false,
+    description:
+      'An AI agent purpose-built for the Balisong Flipping Center, surfaced through a Discord bot and an embedded chat widget on the platform. Built on FastAPI and powered by Claude Sonnet 5 via AWS Bedrock, with retrieval tools spanning the platform\'s own maker/knife database and live web search.',
+    highlights: [
+      'Built a FastAPI backend serving a single AI agent across two surfaces — a Discord bot and an in-app chat widget',
+      'Integrated AWS Bedrock to run Claude Sonnet 5 as the underlying LLM',
+      'Designing tool-calling access to the Balisong Flipping Center database for maker- and knife-specific lookups',
+      'Adding web search and site-scraping tools so the agent can pull up-to-date information beyond the platform\'s own data',
+    ],
+    tech: ['Python', 'FastAPI', 'AWS Bedrock', 'Claude Sonnet 5', 'Discord API', 'PostgreSQL', 'RAG'],
+    liveUrl: null,
+    githubUrl: 'https://github.com/BalisongFlippingCenter/BalisongFlippingCenterAIPython',
+    detailPath: null,
   },
   {
     title: 'QuizMaster — Lewis University Capstone',

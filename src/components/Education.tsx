@@ -78,7 +78,7 @@ export default function Education() {
               </h3>
               <div className="flex items-start gap-3">
                 <div>
-                  <p className="text-white font-semibold text-sm">AWS Certified Cloud Practitioner</p>
+                  <p className="text-white font-semibold text-sm">AWS Certified Solutions Architect – Associate</p>
                   <p className="text-gray-500 text-xs mt-0.5">Amazon Web Services</p>
                   <span className="inline-block mt-2 px-2 py-0.5 bg-yellow-900/40 border border-yellow-700 text-yellow-400 text-xs rounded-md font-medium">
                     In Progress

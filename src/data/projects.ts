@@ -28,7 +28,7 @@ export const projects: Project[] = [
       'Implemented JWT authentication with refresh tokens and Google OAuth2 login',
       'Built a containerized Spring Boot/PostgreSQL backend with WebSocket/STOMP real-time messaging, deployed on EC2 via Docker Compose',
       'Provisioned the entire production AWS environment in Terraform — CloudFront + S3 for the frontend, EC2/ECR/Route 53/ACM for the backend, and SSM Parameter Store for secrets',
-      'Built GitHub Actions CI/CD pipelines authenticating via OIDC federation — no long-lived AWS credentials — with separate staging and production deploy paths',
+      'Built GitHub Actions CI/CD pipelines authenticating via OIDC federation — no long-lived AWS credentials — with separate staging and production deploy paths (staging environment currently offline to reduce AWS costs)',
     ],
     tech: ['TypeScript', 'React', 'Redux', 'Spring Boot', 'PostgreSQL', 'Docker', 'AWS EC2', 'AWS S3', 'AWS CloudFront', 'AWS ECR', 'Terraform', 'GitHub Actions', 'JWT', 'OAuth2', 'Tailwind CSS', 'Claude Code'],
     liveUrl: 'https://www.balisongflippingcenter.com',

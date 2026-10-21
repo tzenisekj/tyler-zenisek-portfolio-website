@@ -58,7 +58,7 @@ export const projects: Project[] = [
     detailPath: null,
   },
   {
-    title: 'Balisong Bot',
+    title: 'Discord Balisong Bot',
     slug: 'balisong-bot',
     status: 'Live',
     year: '2026',

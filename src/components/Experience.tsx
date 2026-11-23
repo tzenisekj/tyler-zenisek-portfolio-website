@@ -3,17 +3,18 @@ import FadeIn from './FadeIn'
 
 const experiences = [
   {
-    title: 'Founding Engineer',
+    title: 'Creator & Sole Engineer',
     company: 'Balisong Flipping Center',
-    location: 'Remote',
+    location: 'Independent Project',
     period: 'January 2021 – Present',
     bullets: [
-      'Architected and deployed a production-grade full-stack community platform — 9,000+ commits across 40+ features, currently in pre-launch testing.',
-      'Built containerized Java/Spring Boot microservices backed by MongoDB and deployed to AWS EC2, with images stored in AWS ECR.',
-      'Implemented JWT and OAuth2 authentication for secure user account management.',
-      'Established a fully automated CI/CD pipeline using GitHub Actions, Ansible, and Docker — reducing deployment to a single push.',
+      'Designed, built, and run a live full-stack community platform covering 40+ features, from the React/TypeScript frontend to the AWS infrastructure.',
+      'Built containerized Java/Spring Boot services backed by PostgreSQL, deployed to AWS EC2 from images in AWS ECR, with Flyway-managed schema migrations.',
+      'Implemented JWT and Google OAuth2 authentication with refresh tokens, rate-limited auth endpoints, and email-verified accounts.',
+      'Automated CI/CD with GitHub Actions: tests gate every merge, then images ship to ECR and deploy to EC2 over AWS SSM using OIDC, with no long-lived AWS credentials.',
+      'Added Latch, an AI assistant on AWS Bedrock that answers from the platform\'s own REST API, with an LLM eval suite to measure answer quality.',
     ],
-    skills: ['TypeScript', 'React', 'Redux', 'Spring Boot', 'MongoDB', 'Docker', 'AWS EC2', 'AWS ECR', 'GitHub Actions', 'Ansible', 'JWT', 'OAuth2'],
+    skills: ['Java', 'Spring Boot', 'PostgreSQL', 'TypeScript', 'React', 'Redux', 'Docker', 'AWS EC2', 'AWS ECR', 'Terraform', 'GitHub Actions', 'JUnit', 'JWT', 'OAuth2'],
   },
   {
     title: 'Software Engineering Team Lead',

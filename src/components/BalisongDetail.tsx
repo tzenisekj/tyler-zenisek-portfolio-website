@@ -17,8 +17,10 @@ const features = [
   'Real-time messaging over WebSocket/STOMP, JWT-authenticated on CONNECT',
   'Media uploads (images/video) stored in AWS S3',
   'Community features: posts, profiles, knife collections, and interactions',
-  'Interactive API docs via SpringDoc OpenAPI / Swagger UI',
-  'Health monitoring via Spring Actuator',
+  'Knife catalog with an admin portal for bulk JSON import, plus moderation tooling (reports, bans, suspensions)',
+  'Latch, an AI assistant on AWS Bedrock that answers from the platform\'s own API, measured by an LLM eval suite',
+  'Tested with 500+ JUnit/Mockito tests (Testcontainers for PostgreSQL integration) and 1,100+ Vitest tests, gated in CI',
+  'API docs via SpringDoc OpenAPI in development, plus a Spring Actuator health check',
   'Schema migrations managed with Flyway',
 ]
 
@@ -164,16 +166,15 @@ export default function BalisongDetail() {
 
             <div className="flex flex-wrap items-center gap-3 mb-4">
               <h1 className="text-3xl md:text-4xl font-bold text-white">Balisong Flipping Center</h1>
-              <span className="text-xs font-semibold px-2 py-1 rounded-full bg-yellow-900/50 text-yellow-400 border border-yellow-700">
-                In Progress
+              <span className="text-xs font-semibold px-2 py-1 rounded-full bg-green-900/50 text-green-400 border border-green-700">
+                Live
               </span>
             </div>
 
             <p className="text-gray-400 leading-relaxed max-w-2xl mb-6">
               A full-stack community platform for balisong flipping enthusiasts to share content, connect with
-              other flippers, and showcase their skills — 40+ use cases and 10,000+ commits across a
-              React/TypeScript frontend and a Spring Boot backend, with the entire production environment
-              provisioned in Terraform.
+              other flippers, and showcase their skills — 40+ use cases across a React/TypeScript frontend and a
+              Spring Boot/PostgreSQL backend, with the entire production environment provisioned in Terraform.
             </p>
 
             <div className="flex flex-wrap gap-3">

@@ -6,18 +6,23 @@ const skillGroups = [
   },
   {
     category: 'Frameworks & Libraries',
-    primary: ['React', 'Spring Boot'],
-    familiar: ['Redux', 'Android SDK'],
+    primary: ['Spring Boot', 'Spring Security', 'React', 'Redux'],
+    familiar: ['FastAPI', 'Node.js', 'Android SDK'],
   },
   {
     category: 'Cloud & DevOps',
     primary: ['Docker', 'AWS EC2', 'AWS ECR', 'Terraform', 'GitHub Actions', 'CI/CD'],
-    familiar: ['Amazon S3'],
+    familiar: ['Amazon S3', 'CloudFront', 'AWS SSM', 'AWS Bedrock'],
   },
   {
     category: 'Data & APIs',
-    primary: ['MongoDB', 'MySQL', 'REST APIs', 'JWT', 'OAuth2'],
-    familiar: ['Firebase', 'WebSockets'],
+    primary: ['PostgreSQL', 'REST APIs', 'JWT', 'OAuth2'],
+    familiar: ['Redis', 'MySQL', 'Flyway', 'WebSockets', 'Firebase'],
+  },
+  {
+    category: 'Testing',
+    primary: ['JUnit', 'Mockito', 'Vitest', 'React Testing Library'],
+    familiar: ['Testcontainers', 'pytest', 'LLM evals'],
   },
   {
     category: 'Tools & Practices',

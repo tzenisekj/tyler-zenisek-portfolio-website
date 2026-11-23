@@ -39,14 +39,14 @@ Output is written to `dist/`.
 
 ## Featured Project: Balisong Flipping Center
 
-A full-stack community platform for the balisong flipping hobby, currently in active development.
+A live full-stack community platform for the balisong flipping hobby.
 
 - **Frontend:** React, Redux, TypeScript, Tailwind CSS
-- **Backend:** Java, Spring Boot (microservices), MongoDB
-- **Auth:** JWT + OAuth2
-- **Infra:** AWS EC2, AWS ECR, Docker, GitHub Actions, Ansible
-- **Live:** https://www.tylerzeniseks.com
-- **Source:** https://github.com/BalisongFlippingHub
+- **Backend:** Java, Spring Boot, PostgreSQL
+- **Auth:** JWT + Google OAuth2
+- **Infra:** Terraform-provisioned AWS (EC2, ECR, S3, CloudFront, SSM), Docker, GitHub Actions with OIDC
+- **Live:** https://www.balisongflippingcenter.com
+- **Source:** https://github.com/BalisongFlippingCenter
 
 ## Contact
 

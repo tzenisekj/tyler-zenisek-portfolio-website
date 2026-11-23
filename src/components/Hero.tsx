@@ -23,7 +23,7 @@ export default function Hero() {
             <FadeIn delay={80}>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-green-900/40 border border-green-700 rounded-full mb-5">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse shrink-0" />
-              <span className="text-green-400 text-sm font-medium">Open to Work — Backend & DevOps</span>
+              <span className="text-green-400 text-sm font-medium">Open to Work — Backend & Full Stack</span>
             </div>
             </FadeIn>
 
@@ -34,7 +34,7 @@ export default function Hero() {
               </p>
               <span className="text-gray-600 hidden sm:inline">·</span>
               <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center lg:justify-start gap-2">
-                {['Application Development', 'Backend', 'Cloud', 'DevOps'].map((tag) => (
+                {['Java / Spring Boot', 'Full Stack', 'Cloud', 'DevOps'].map((tag) => (
                   <span key={tag} className="px-3 py-1 bg-[#1a1838] border border-[#332f6e] text-gray-400 text-xs font-medium rounded-full text-center w-full sm:w-auto inline-flex items-center justify-center">
                     {tag}
                   </span>
@@ -61,7 +61,8 @@ export default function Hero() {
               a production bug, extending an existing service, or integrating a new feature into
               a live system — I focus on understanding how things work before changing them. Experienced
               with Java and Spring Boot microservices, AWS infrastructure, CI/CD pipelines, and React
-              frontends. Cum laude CS grad with 10,000+ commits across two production apps.
+              frontends. Cum laude CS grad who built and runs a live full-stack platform end to end, including
+              an AI assistant measured by its own eval suite.
             </p>
             </FadeIn>
 

@@ -64,8 +64,8 @@ export default function About() {
           <div className="flex flex-col gap-4">
             <div className="grid grid-cols-2 gap-4">
               {[
-                { label: 'Commits Shipped', value: '10,000+' },
-                { label: 'Apps in Production', value: '2' },
+                { label: 'Automated Tests', value: '1,700+' },
+                { label: 'Apps in Production', value: '3' },
                 { label: 'Features Built', value: '40+' },
                 { label: 'Years Experience', value: '4+' },
               ].map((stat, i) => (

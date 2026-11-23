@@ -19,10 +19,10 @@ function formatNumber(n: number): string {
 
 export default function StatCounter({ value, label, delay = 0 }: Props) {
   const { ref, viewState } = useInView(0.3)
-  const [count, setCount] = useState(0)
+  const { numeric: target, suffix } = parseValue(value)
+  const [count, setCount] = useState(target)
   const rafRef = useRef<number | null>(null)
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
-  const { numeric: target, suffix } = parseValue(value)
 
   useEffect(() => {
     const cleanup = () => {
@@ -44,7 +44,6 @@ export default function StatCounter({ value, label, delay = 0 }: Props) {
       }, delay)
     } else {
       cleanup()
-      setCount(0)
     }
 
     return cleanup
@@ -64,7 +63,7 @@ export default function StatCounter({ value, label, delay = 0 }: Props) {
       className={`transition-all duration-1000 ease-out ${visibilityClass} bg-[#1a1838] rounded-xl p-4 sm:p-6 border border-[#332f6e] text-center`}
     >
       <p className="text-2xl sm:text-3xl font-bold text-indigo-400 mb-1">
-        {formatNumber(count)}{suffix}
+        {formatNumber(viewState === 'visible' ? count : target)}{suffix}
       </p>
       <p className="text-sm text-gray-500">{label}</p>
     </div>

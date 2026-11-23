@@ -26,9 +26,10 @@ export const projects: Project[] = [
     highlights: [
       'Designed and shipped a full-stack web app covering 40+ use cases: posts, profiles, knife collections, real-time messaging, a knife catalog, and admin moderation',
       'Implemented JWT authentication with refresh tokens and Google OAuth2 login',
-      'Built a containerized Spring Boot/PostgreSQL backend with WebSocket/STOMP real-time messaging, deployed on EC2 via Docker Compose',
-      'Provisioned the entire production AWS environment in Terraform — CloudFront + S3 for the frontend, EC2/ECR/Route 53/ACM for the backend, and SSM Parameter Store for secrets',
-      'Built GitHub Actions CI/CD pipelines authenticating via OIDC federation — no long-lived AWS credentials — with separate staging and production deploy paths (staging environment currently offline to reduce AWS costs)',
+      'Designed a Spring Boot/PostgreSQL REST API of 106 endpoints with WebSocket/STOMP real-time messaging, containerized and deployed on EC2 via Docker Compose',
+      'Codified 76 AWS resources in Terraform — CloudFront + S3 for the frontend, EC2/ECR/Route 53/ACM for the backend, and SSM Parameter Store for secrets — so production can be rebuilt from scratch',
+      'Built GitHub Actions CI/CD pipelines authenticating via OIDC federation — no long-lived AWS credentials — and shipped 41 production deploys in 10 weeks (95% success), each rolled out in ~2.5 minutes',
+      'Cut AWS spend 62% ($105 to $40 a month) by auditing Cost Explorer data and shutting down unused environments, including the staging environment, which Terraform can rebuild on demand',
       'Gated every merge on automated tests: 500+ JUnit/Mockito tests, with Testcontainers running PostgreSQL integration tests, on the backend and 1,100+ Vitest tests on the frontend',
     ],
     tech: ['TypeScript', 'React', 'Redux', 'Spring Boot', 'PostgreSQL', 'JUnit', 'Testcontainers', 'Vitest', 'Docker', 'AWS EC2', 'AWS S3', 'AWS CloudFront', 'AWS ECR', 'Terraform', 'GitHub Actions', 'JWT', 'OAuth2', 'Tailwind CSS', 'Claude Code'],
@@ -47,7 +48,7 @@ export const projects: Project[] = [
     highlights: [
       'Built genuine tool calling over Bedrock\'s Converse API — Claude searches posts, profiles, collections, and the knife catalog, and files moderation reports for logged-in users, through the platform\'s live REST API',
       'Built an eval harness graded by deterministic checks and an LLM judge, then used it to drive fixes that raised the pass rate from 62% to 92%; it has since grown to 46 scenario cases, including voice and formatting checks, and currently passes 93% at 5 runs per case',
-      'Streamed responses token by token from Bedrock through a Spring Boot relay to the browser',
+      'Cut the wait for a first response from about 8 seconds to 1.2 seconds by streaming tokens from Bedrock through FastAPI and a Spring Boot relay to the browser',
       'Enabled prompt caching on the static system prompt and tool definitions, cutting per-run eval cost by ~60%, and bounded per-conversation tokens by trimming Redis-backed history and compacting old tool results',
       'Gated deploys on an 80+ test pytest suite in GitHub Actions, shipping Docker images to ECR and deploying to EC2 over SSM with OIDC — no long-lived AWS credentials',
       'Secured the service in layers — per-client credentials and session rate limiting at the backend relay, plus a shared internal secret on the AI service',

@@ -6,7 +6,7 @@ const experiences = [
     title: 'Creator & Sole Engineer',
     company: 'Balisong Flipping Center',
     location: 'Independent Project',
-    period: 'January 2021 – Present',
+    period: 'March 2024 – Present',
     bullets: [
       'Designed, built, and run a live full-stack community platform covering 40+ features, from the React/TypeScript frontend to the AWS infrastructure.',
       'Built containerized Java/Spring Boot services backed by PostgreSQL, deployed to AWS EC2 from images in AWS ECR, with Flyway-managed schema migrations.',

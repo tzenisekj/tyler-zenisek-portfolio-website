@@ -67,7 +67,7 @@ export default function About() {
                 { label: 'Automated Tests', value: '1,700+' },
                 { label: 'Apps in Production', value: '3' },
                 { label: 'Features Built', value: '40+' },
-                { label: 'Years Experience', value: '4+' },
+                { label: 'AWS Resources in Terraform', value: '76' },
               ].map((stat, i) => (
                 <StatCounter key={stat.label} value={stat.value} label={stat.label} delay={i * 100} />
               ))}

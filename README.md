@@ -37,6 +37,15 @@ npm run build
 
 Output is written to `dist/`.
 
+## Resume
+
+The downloadable resume (`public/Tyler_Zenisek_Resume.pdf`) is generated from `scripts/build_resume.py`. Edit the content there, then rebuild it:
+
+```bash
+pip install reportlab
+python scripts/build_resume.py
+```
+
 ## Featured Project: Balisong Flipping Center
 
 A live full-stack community platform for the balisong flipping hobby.

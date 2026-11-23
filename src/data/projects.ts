@@ -57,7 +57,7 @@ export const projects: Project[] = [
     tech: ['Python', 'FastAPI', 'Claude', 'AWS Bedrock', 'Redis', 'pytest', 'Docker', 'AWS EC2', 'GitHub Actions', 'Spring Boot'],
     liveUrl: 'https://www.balisongflippingcenter.com',
     githubUrl: 'https://github.com/BalisongFlippingCenter/BalisongFlippingCenterAIPython',
-    detailPath: null,
+    detailPath: '/projects/balisong/latch',
   },
   {
     title: 'Discord Balisong Bot',

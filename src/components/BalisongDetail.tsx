@@ -273,6 +273,15 @@ export default function BalisongDetail() {
                   46-case eval suite graded by deterministic checks and an LLM judge at 5 runs per case. It took the pass
                   rate from 62% to 92% and currently sits at 93%.
                 </p>
+                <Link
+                  to="/projects/balisong/latch"
+                  className="mt-4 inline-flex items-center gap-1.5 text-indigo-400 hover:text-indigo-300 text-sm font-semibold transition-colors"
+                >
+                  Read the eval case study
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
             </div>
           </FadeIn>

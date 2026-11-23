@@ -10,6 +10,7 @@ const techStack = [
   { layer: 'Infrastructure', tech: 'Terraform-provisioned AWS: EC2, S3, CloudFront, Route 53, ACM, ECR, SSM' },
   { layer: 'CI/CD', tech: 'GitHub Actions with OIDC federation (no long-lived AWS credentials)' },
   { layer: 'Containerization', tech: 'Docker (multi-stage builds), Docker Compose on EC2' },
+  { layer: 'AI', tech: 'Latch: FastAPI + Claude Sonnet 4.6 on AWS Bedrock, Redis, pytest, LLM eval suite' },
 ]
 
 const features = [
@@ -242,6 +243,35 @@ export default function BalisongDetail() {
                   The EC2 security group only accepts port 8080 traffic from CloudFront's managed prefix list, so
                   the backend is unreachable except through the CDN. GitHub Actions deploys via two OIDC-federated
                   IAM roles — no long-lived AWS credentials stored in either repo.
+                </p>
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn>
+            <div>
+              <p className="text-indigo-400 text-sm font-semibold tracking-widest uppercase mb-4">AI Layer: Latch</p>
+              <div className="bg-[#1a1838] border border-[#332f6e] rounded-xl p-6 md:p-8">
+                <div className="flex flex-col items-center gap-3">
+                  <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <FlowBox title="Website chat widget" subtitle="Sends the page the user is on and their JWT" />
+                    <FlowBox title="Discord bot" subtitle="Separate persona, catalog tools + web search" />
+                  </div>
+                  <Arrow />
+                  <FlowBox title="Spring Boot relay" subtitle="Per-client keys, per-session rate limits" />
+                  <Arrow />
+                  <FlowBox title="Latch (FastAPI)" subtitle="Picks persona + tools per client, Redis chat history, streams tokens" />
+                  <Arrow />
+                  <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <FlowBox title="Claude on AWS Bedrock" subtitle="Converse API tool calling, prompt caching" />
+                    <FlowBox title="BFC REST API" subtitle="Tool calls: posts, profiles, collections, catalog, reports" />
+                  </div>
+                </div>
+                <p className="text-gray-500 text-xs mt-6 leading-relaxed">
+                  Latch never answers site questions from model memory: every fact about posts, users, or knives comes
+                  from a tool call into the same API the website uses. Before shipping a prompt or model change, I run a
+                  46-case eval suite graded by deterministic checks and an LLM judge at 5 runs per case. It took the pass
+                  rate from 62% to 92% and currently sits at 93%.
                 </p>
               </div>
             </div>

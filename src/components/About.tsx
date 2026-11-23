@@ -24,6 +24,8 @@ export default function About() {
                 the code is written — I want to understand how it deploys, how it scales, and how
                 it fails. That mindset pushed me toward backend architecture, cloud infrastructure,
                 and DevOps, where the gap between "works on my machine" and "works in production" lives.
+                I build with AI the same way: I use Claude Code every day, and every change still has to
+                pass the test suites and CI gates before it merges.
               </p>
               <p>
                 Outside of work I build for the same reason I got into this field — because a problem

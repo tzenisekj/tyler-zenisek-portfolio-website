@@ -22,11 +22,16 @@ const skillGroups = [
   {
     category: 'Testing',
     primary: ['JUnit', 'Mockito', 'Vitest', 'React Testing Library'],
-    familiar: ['Testcontainers', 'pytest', 'LLM evals'],
+    familiar: ['Testcontainers', 'pytest'],
+  },
+  {
+    category: 'AI Engineering',
+    primary: ['Claude on AWS Bedrock', 'LLM tool calling', 'LLM evals', 'Claude Code'],
+    familiar: ['Prompt caching', 'MCP'],
   },
   {
     category: 'Tools & Practices',
-    primary: ['Git', 'Agile / Scrum', 'SDLC', 'Linux', 'MVC', 'Claude Code', 'MCP'],
+    primary: ['Git', 'Agile / Scrum', 'SDLC', 'Linux', 'MVC'],
     familiar: ['Jira', 'Postman', 'Swagger'],
   },
 ]
@@ -56,7 +61,11 @@ export default function Skills() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillGroups.map((group, i) => (
-            <FadeIn key={group.category} delay={i * 80}>
+            <FadeIn
+              key={group.category}
+              delay={i * 80}
+              className={i === skillGroups.length - 1 ? 'md:col-span-2 lg:col-span-3' : undefined}
+            >
             <div
               className="bg-[#0f0e28] border border-[#2a2855] rounded-xl p-6 hover:border-indigo-900 transition-colors duration-300 h-full"
             >
